@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customized T-Shirt Order Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Order Your Customized T-Shirt</h1>
+
+        <form id="orderForm">
+            <!-- Tagline on the Shirt -->
+            <div class="form-group">
+                <label for="tagline">Tagline on the Shirt:</label>
+                <input type="text" id="tagline" name="tagline" class="form-control" placeholder="Enter your tagline"
+                    required>
+            </div>
+
+            <!-- T-Shirt Color -->
+            <div class="form-group">
+                <label for="color">Color:</label>
+                <select id="color" name="color" class="form-control" required>
+                    <option value="">Select a color</option>
+                    <option value="white">White</option>
+                    <option value="black">Black</option>
+                    <option value="blue">Blue</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                </select>
+            </div>
+
+            <!-- T-Shirt Size -->
+            <div class="form-group">
+                <label for="size">Size:</label>
+                <select id="size" name="size" class="form-control" required>
+                    <option value="">Select a size</option>
+                    <option value="S">Small</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                    <option value="XL">Extra Large</option>
+                    <option value="XXL">XXL</option>
+                </select>
+            </div>
+
+            <!-- Quantity -->
+            <div class="form-group">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" class="form-control" min="1" placeholder="1"
+                    required>
+            </div>
+
+            <!-- Delivery Date -->
+            <div class="form-group">
+                <label for="delivery-date">Delivery Date:</label>
+                <input type="date" id="delivery-date" name="delivery-date" class="form-control" required>
+            </div>
+
+            <!-- Recipient's Name -->
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Enter recipient's name"
+                    required>
+            </div>
+
+            <!-- Address -->
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" class="form-control"
+                    placeholder="Enter delivery address" required>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Enter email address"
+                    required>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter phone number"
+                    required>
+            </div>
+
+            <!-- Additional Comments -->
+            <div class="form-group">
+                <label for="comments">Additional Comments:</label>
+                <textarea id="comments" name="comments" class="form-control" placeholder="Any special instructions"
+                    rows="4"></textarea>
+            </div>
+
+            <!-- Form Buttons -->
+            <button type="submit" class="btn btn-primary">Place Order</button>
+            <button type="reset" class="btn btn-secondary">Reset Form</button>
+        </form>
+
+        <div id="receipt" class="mt-5"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
